@@ -1,0 +1,553 @@
+/********************** CSS RESET ************************/
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+    /*So that elements will scale correctly*/
+}
+
+/********************** GENERIC ELEMENTS ************************/
+
+body{
+    background-color:#fffcf1;
+}
+
+/********************** Logo ************************/
+
+.logo{
+    height: 120px;
+    display: block;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 60px;
+}
+
+/********************** Carousel ************************/
+
+img[alt^="go to"] {
+    cursor: pointer;
+    width: 70px;
+    height: auto;
+}
+
+.component{
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.carousel{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 3600px;
+}
+
+.slide img{
+    height: 400px;
+    width: 600px;
+    display: block;
+    object-fit: cover;
+    object-position: 60% 50%;
+    transition-property: inherit;
+    transition-duration: 0.5s;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+}
+
+.slide p{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.slide:hover img{
+    filter: blur(3px);
+    transform: scale(1.1);
+}
+
+.slide:hover p{
+    position: absolute;
+    color: #fffcf1;
+    font-size: 2em;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    opacity: 1;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/********************** SHARING LAYOUT ************************/
+
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon{
+    display: block;
+    margin: 60px 10px;
+}
+
+.social-icon svg{
+    display: block;
+    font-size: 20px;
+    height: 2em;
+    fill: #1f0f04;
+}
+
+/********************** CONTAINER ************************/
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+}
+
+/********************** ABOUT MORE ************************/
+
+.section{
+    background-color: #F5F5DC;
+}
+
+.aboutmore{
+    display: flex;
+    padding: 50px;
+}
+
+.aboutmore img{
+    height: 700px;
+    border-radius: 10px;
+}
+
+.about-text{
+    margin: auto;
+    margin-left: 50px;
+    font-size: 1.5em;
+}
+
+.about-text h1{
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    color: #1f0f04;
+}
+
+.about-text p{
+    margin: 50px 0px 100px 0px ;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #1f0f04;
+}
+
+.about-text a{
+    background-color: #23a261;
+    padding: 25px;
+    text-decoration: none;
+    color: #fffcf1;
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow:  0 3px 3px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s;
+}
+
+.about-text a:hover{
+    box-shadow:  0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/********************** NAVIGATION ************************/
+
+.navbar{
+    position: fixed;
+    background-color: #23a261;
+    padding: 30px 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-color: #107440;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    z-index: 1002;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a{
+    display: block;
+    text-decoration: none;
+    color: #fffcf1;
+}
+
+.navbar-nav{
+    display: flex;
+    list-style: none;    
+    gap: 20px; 
+    align-items: center;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.navbar-brand{
+    font-size: 2.5em;
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.dropdown{
+    display: none;
+    background-color: #23a261;
+    box-shadow:  0 3px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 175px;
+}
+
+.dropdown a{
+    padding: 10px 20px;
+    font-size: 0.8em;
+}
+
+.nav-items:hover .dropdown {
+    display: block;
+}
+
+label svg{
+    fill: #fffcf1;
+}
+/********************** ABOUT ME ************************/
+
+.about{
+    padding-top: 1px;
+    padding-bottom: 70px;
+    background-color: #F5F5DC;
+}
+
+.about img{
+    display: flex;
+    margin: auto;
+    border-radius: 70px;
+    margin-top: 170px;
+    height: 700px;
+    border: 7px solid #23a261;
+    box-shadow: 0 5px 5px #dbd6c1;
+}
+
+.about h1{
+    text-align: center;
+    color: #1f0f04;
+    font-size: 3em;
+    font-family: fredoka, Arial, Helvetica, sans-serif;
+    margin: 50px 0px 30px 0px;
+}
+
+.about p{
+    text-align: center;
+    font-size: 1.5em;
+    color: #1f0f04;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    padding: 0px 50px 0px 50px;
+}
+
+/********************** FOOTER ************************/
+
+.website-footer{
+    background-color: #23a261;
+    padding: 50px 0px 0px 0px;
+    margin-top: 60px;
+}
+
+.website-footer .container{
+    display: flex;   
+}
+
+.name{
+    color: #fffcf1;
+    font-size: 1.2em;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
+}
+
+.name-footings{
+    text-align: left;
+    list-style: none;
+}
+
+.footings{
+    margin-left: auto;
+    text-align: right;
+    list-style: none;
+    gap: 50px;
+    columns: 2;
+}
+
+.footer-items{
+    margin-bottom: 8px;
+}
+
+.contact-left {
+    margin-left: auto;
+    text-align: right;
+}
+
+.contact-left a {
+    text-decoration: none;
+    color: #fffcf1;
+    font-size: 1.2em;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+}
+
+.footer-items a{
+    text-decoration: none;
+    color: #fffcf1;
+    font-size: 1.2em;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+}
+
+.footer-social-links{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-icon{
+    display: block;
+    margin: 30px 10px 10px 0px;
+}
+
+.footer-social-icon svg{
+    display: block;
+    height: 1.5em;
+    fill: #fffcf1;
+}
+
+.copyright{
+    color: #fffcf1;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/********************** PORTFOLIO GALLERY ************************/
+
+.card {
+    display: block;
+}
+
+.card-image{
+    width: 100%;
+}
+
+.card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+}
+
+.card{
+    color: #000000;
+    text-decoration: none;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+}
+
+.narrow{
+    background-color: #F5F5DC;
+}
+
+/********************** GALLERY LAYOUT ************************/
+
+.row{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    margin: 40px;
+}
+
+.row .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.three-column .column{
+    width: calc((100% - 20px) / 3);
+}
+
+.narrow{
+    max-width: 1200px; 
+    margin: auto;
+    padding-top: 110px;
+}
+
+.title-desc{
+    margin: 40px;
+    width: 50%;
+    color: #1f0f04;
+}
+
+.title-desc h1{
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 3em;
+}
+
+.title-desc p{
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+/********************** CONTACT ************************/
+
+.contact{
+    margin-top: 282px;
+    text-align: center;
+}
+
+.contact h1{
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: #1f0f04;
+}
+
+.contact p{
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #1f0f04;
+    margin-top: 20px;  
+}
+
+.contact-text{
+    margin-top: 50px;
+}
+
+/********************** IMAGE FOCUS ************************/
+
+.focus-image{
+    margin: 0 40px 40px;
+    padding-bottom: 40px;
+}
+
+.focus-image img{
+    height: 600px;
+}
+
+.focus-image h1{
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: #1f0f04;
+    margin: 10px 0px 20px 0px ;
+}
+
+.focus-image p{
+    font-size: 1.2em;
+    color: #1f0f04;
+    font-family: quicksand, Arial, Helvetica, sans-serif;
+    width: 75%;
+    
+}
+
+/** TEST **/
+.target {
+    display: none;
+    padding-top: 140px;
+}
+
+.target:target {
+    display: block;
+}
+
+/* TEMP */
+.no-top-padding {
+    padding-top: 0;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.top-left {
+    position: absolute;
+    top: 30px;
+    right: 85px;
+}
+
+#menu-visibility {
+    display: none;
+}
+
+@media screen and (max-width: 1369px) {
+    .navbar-nav {
+        position: fixed;
+        background-color: #23a261;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none; /* cannot use this element if it's not visible */
+
+        transition-property: opacity;
+        transition-duration: .3s;
+    }
+
+    .navbar-nav li:not(.mobile-menu) {
+        width: 25%;
+        text-align: center;
+        color: #fffcf1;
+    }
+
+    .dropdown{
+        display: block;
+        background: transparent;
+        box-shadow:  none;
+        position: relative;
+        width: auto;
+    }
+
+    .dropdown a{
+        padding: 10px 0px;
+        font-size: 1em;
+    }
+
+    #menu-visibility:checked + .navbar-nav {
+        opacity: 1;
+        pointer-events: all; /* cursor can interact with element when it's visible */
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
