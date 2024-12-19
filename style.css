@@ -472,7 +472,7 @@ label svg{
     
 }
 
-/** TEST **/
+/********************** FOCUS TARGET ************************/
 .target {
     display: none;
     padding-top: 140px;
@@ -482,7 +482,7 @@ label svg{
     display: block;
 }
 
-/* TEMP */
+/********************** MOBILE MENU ************************/
 .no-top-padding {
     padding-top: 0;
 }
@@ -501,6 +501,7 @@ label svg{
     display: none;
 }
 
+/********************** MEDIA ************************/
 @media screen and (max-width: 1369px) {
     .navbar-nav {
         position: fixed;
