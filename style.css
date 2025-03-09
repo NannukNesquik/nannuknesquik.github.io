@@ -136,7 +136,7 @@ img[alt^="go to"] {
 .about-text{
     margin: auto;
     margin-left: 50px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .about-text h1{
@@ -147,9 +147,9 @@ img[alt^="go to"] {
 }
 
 .about-text p{
-    margin: 50px 0px 100px 0px ;
+    margin: 30px 0px 100px 0px ;
     font-family: quicksand, Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-size: 1.2em;
     color: #1f0f04;
 }
 
@@ -261,10 +261,10 @@ label svg{
 
 .about p{
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #1f0f04;
     font-family: quicksand, Arial, Helvetica, sans-serif;
-    padding: 0px 50px 0px 50px;
+    padding: 0px 240px 0px 240px;
 }
 
 /********************** FOOTER ************************/
@@ -429,14 +429,14 @@ label svg{
 .contact h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
-    font-size: 2.5em;
+    font-size: 3em;
     color: #1f0f04;
 }
 
 .contact p{
     font-family: quicksand, Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #1f0f04;
     margin-top: 20px;  
 }
